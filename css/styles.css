@@ -11187,3 +11187,84 @@ iframe {
   aspect-ratio: 16 / 9;
   border-radius: 10px;
 }
+.video-container {
+  display: flex;
+  flex-direction: column; /* Susun elemen ke bawah */
+  align-items: center; /* Pusatkan elemen */
+  text-align: center;
+  width: 100%;
+}
+
+iframe {
+  width: 100%; /* Agar video penuh di layar HP */
+  max-width: 400px; /* Maksimal lebar agar tidak terlalu besar */
+  height: auto;
+  aspect-ratio: 16/9; /* Pastikan proporsi video tetap */
+}
+@media (max-width: 480px) {
+  .intro-text {
+    width: 80%; /* Perkecil lebar kotak */
+    top: 50%; /* Pusatkan secara vertikal */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Biar tetap tengah */
+    padding: 10px; /* Kurangi padding */
+    font-size: 12px; /* Kecilkan ukuran teks */
+    text-align: center;
+  }
+
+  .intro-text h2 {
+    font-size: 1rem; /* Kecilkan heading */
+  }
+
+  .intro-text p {
+    font-size: 0.8rem; /* Ukuran teks lebih kecil */
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column; /* Susun elemen ke bawah */
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro-img {
+    width: 100%; /* Pastikan gambar menyesuaikan layar */
+  }
+}
+@media (max-width: 480px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+
+  .intro-img {
+    width: 100%; /* Pastikan gambar mengikuti lebar layar */
+    height: auto;
+  }
+
+  .intro-text {
+    width: 90%; /* Pastikan teks tidak terlalu lebar */
+    max-width: 320px;
+    top: auto;
+    left: auto;
+    position: relative; /* Hapus absolute agar tidak menumpuk gambar */
+    transform: none;
+    padding: 15px;
+    font-size: 14px; /* Kecilkan teks */
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  .intro-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .intro-text p {
+    font-size: 0.9rem;
+  }
+
+  .intro-button {
+    margin-top: 10px;
+  }
+}
